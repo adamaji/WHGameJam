@@ -4,6 +4,8 @@ public var x_accel : float;
 public var y_accel : float;
 public var max_velocity : float;
 public var deadZone : float;
+public var vArrow : arrowController;
+public var aArrow : arrowController;
 
 function Start () {
 
@@ -20,6 +22,8 @@ function FixedUpdate () {
 		rigidbody.velocity.y = 0;
 	}
 	
+	vArrow.pointVector = Vector2(rigidbody.velocity.x, rigidbody.velocity.y) * 0.5;
+	aArrow.pointVector = Vector2(x_accel, y_accel) * 0.5;
 }
 
 function onGUI() {
