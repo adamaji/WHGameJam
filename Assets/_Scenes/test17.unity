@@ -419,7 +419,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a80660fd412c65f41ad73019926e87ac, type: 2}
       propertyPath: max_velocity
-      value: 20
+      value: 99999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a80660fd412c65f41ad73019926e87ac, type: 2}
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x_accel: 0
   y_accel: 0
-  max_velocity: 20
+  max_velocity: 99999
   deadZone: .349999994
   vArrow: {fileID: 620057248}
   aArrow: {fileID: 254664069}
@@ -1375,7 +1375,7 @@ GameObject:
   - 4: {fileID: 2066127574}
   - 132: {fileID: 2066127573}
   - 114: {fileID: 2066127572}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GUIDude
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1408,7 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 12800000, guid: eca2730b338272d4ca8192e60b618ffd, type: 3}
   m_Material: {fileID: 0}
   m_FontSize: 100
   m_FontStyle: 0
@@ -1416,7 +1416,7 @@ GUIText:
     serializedVersion: 2
     rgba: 4278255390
   m_PixelCorrect: 0
-  m_RichText: 0
+  m_RichText: 1
 --- !u!4 &2066127574
 Transform:
   m_ObjectHideFlags: 0
