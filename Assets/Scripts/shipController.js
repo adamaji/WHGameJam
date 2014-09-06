@@ -27,7 +27,3 @@ function FixedUpdate () {
 	vArrow.pointVector = Vector2(rigidbody.velocity.x, rigidbody.velocity.y) * 0.5;
 	aArrow.pointVector = Vector2(x_accel, y_accel) * 0.5;
 }
-
-function onGUI() {
-	
-}
