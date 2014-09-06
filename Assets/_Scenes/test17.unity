@@ -339,6 +339,14 @@ Prefab:
       propertyPath: arrowScale
       value: .25
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: a80660fd412c65f41ad73019926e87ac, type: 2}
+      propertyPath: color.a
+      value: .56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: a80660fd412c65f41ad73019926e87ac, type: 2}
+      propertyPath: color.a
+      value: .545098066
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a80660fd412c65f41ad73019926e87ac, type: 2}
   m_RootGameObject: {fileID: 2017993545}
@@ -458,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointVector: {x: 0, y: 0}
-  color: {r: 1, g: 0, b: 0, a: 1}
+  color: {r: 1, g: 0, b: 0, a: .545098066}
   arrowScale: .25
 --- !u!1 &377430837
 GameObject:
@@ -606,7 +614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointVector: {x: 0, y: 0}
-  color: {r: .0758621693, g: 1, b: 0, a: 1}
+  color: {r: .0758621693, g: 1, b: 0, a: .56078434}
   arrowScale: .25
 --- !u!1 &667893442
 GameObject:
