@@ -15,7 +15,7 @@ function Start () {
 	for (file in fileInfo) {
 		if (file.Name.EndsWith(".txt")) {
 			levels.push(file.Name);
-			buttonNames.push(file.Name.Replace(".txt",""));
+			buttonNames.push(file.Name.Replace(".txt","").Replace("+","★"));
 		}
 	}
 	buttonNames.push("Real Life ★★★★★");
