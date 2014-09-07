@@ -5,8 +5,13 @@ public var ship : shipController;
 public var camea : Transform;
 public var levelGUI : GUIText;
 private var levelData : Array = [];
+
+static public var flappys : Array = [];
+
 public var obstaclePrefab : Transform;
 public var goalPrefab : Transform;
+public var asteroidPrefab : Transform;
+public var deadFlappy : Transform;
 
 function Start () {
 	if (Application.loadedLevel == 1) {
@@ -33,6 +38,11 @@ function Start () {
 				}
 			}
 		}
+		for (var c : Vector3 in flappys) {
+			Instantiate(deadFlappy, new Vector3(c.x, c.y, Random.Range(30, 50)), Random.rotation);
+		}
+	} else if (Application.loadedLevel == 0) {
+		flappys = [];
 	}
 }
 

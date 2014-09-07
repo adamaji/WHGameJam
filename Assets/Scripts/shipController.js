@@ -7,6 +7,7 @@ public var deadZone : float;
 public var vArrow : arrowController;
 public var axArrow : arrowController;
 public var ayArrow : arrowController;
+public var engine : AudioSource;
 
 function Start () {
 
@@ -28,10 +29,10 @@ function FixedUpdate () {
 	vArrow.pointVector = Vector2(rigidbody.velocity.x, rigidbody.velocity.y) * 0.5;
 	axArrow.pointVector = Vector2(x_accel, 0 ) * 0.5;
 	ayArrow.pointVector = Vector2(0, y_accel) *0.5;
+	
+	var accVec = new Vector2(x_accel, y_accel);
+	
+	engine.volume = Mathf.Max(Mathf.Min(1, Mathf.Lerp(engine.volume, accVec.magnitude, Time.deltaTime * 3)), 0);
+	engine.pitch = Mathf.Max(Mathf.Min(3, Mathf.Lerp(engine.volume, accVec.magnitude, Time.deltaTime * 3)), 0);
 }
 
-function OnCollisionEnter(collision : Collision){
-	if (collision.gameObject.tag == "Finish"){
-		Application.LoadLevel(0);
-	}
-}

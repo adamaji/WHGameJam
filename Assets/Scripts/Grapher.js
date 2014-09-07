@@ -18,7 +18,7 @@ var maxWidth : float = 6000;
 var maxLength : int = 2000;
 
 var showAccel : boolean = true;
-var showVel : boolean = false;
+var showVel : boolean = true;
 
 public var dumb : Material;
 

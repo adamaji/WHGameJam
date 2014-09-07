@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 552e60fa0ed369a4596ade6da76527d7
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - explosionPrefab: {fileID: 400000, guid: 690b9e173ece81b4b9ad85860a9bbb9f, type: 2}
+  - levelController: {fileID: 11400000, guid: 1faef938fb43bda448f465b39c9cf490, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

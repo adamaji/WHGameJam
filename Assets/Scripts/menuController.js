@@ -27,5 +27,8 @@ function OnGUI() {
 			Application.LoadLevel(1);
 		}
 	}
+	if (GUILayout.Button("Real Life ★★★★★")) {
+		Application.Quit();
+	}
 	GUILayout.EndScrollView();
 }

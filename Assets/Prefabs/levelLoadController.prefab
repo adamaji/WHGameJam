@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: levelLoadController
   m_TagString: Untagged
@@ -27,6 +28,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38edbe026117aa44a9f3632c20747d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 0}
+  camea: {fileID: 0}
+  levelGUI: {fileID: 0}
+  obstaclePrefab: {fileID: 400000, guid: 4e2bf42780516e740ab396b563a8d751, type: 2}
+  goalPrefab: {fileID: 400000, guid: c9528467f82412b49a425ea02e050a7a, type: 2}
+  asteroidPrefab: {fileID: 400002, guid: 547e7baf98588d440979ecc5ca5c7259, type: 2}
+  deadFlappy: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
