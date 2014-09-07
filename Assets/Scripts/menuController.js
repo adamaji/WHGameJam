@@ -19,9 +19,9 @@ function Update () {
 }
 
 function OnGUI() {
-	scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(500), GUILayout.Height(500));
+	scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(Screen.width), GUILayout.Height(Screen.height));
 	for (var i : String in levels){
-		if(GUILayout.Button(i.Replace(".txt",""))) {
+		if(GUILayout.Button(i.Replace(".txt","").Replace("+","★"))) {
 			print(i);
 			loader.fileName = i;
 			Application.LoadLevel(1);
