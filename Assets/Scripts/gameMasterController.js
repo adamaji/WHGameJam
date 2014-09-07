@@ -18,4 +18,11 @@ function FixedUpdate () {
 	if (Input.GetKey("escape")){
 		Application.LoadLevel(0);
 	}
+	if (Input.GetButton("Fire3")) {
+		if (Application.loadedLevel == 0){
+			Application.Quit();
+		} else {
+			Application.LoadLevel(0);
+		}
+	}
 }
