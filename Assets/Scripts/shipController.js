@@ -30,9 +30,12 @@ function FixedUpdate () {
 	aArrow.pointVector = Vector2(x_accel, y_accel) * 0.5;
 }
 
-function OnCollisionEnter(){
+function OnCollisionEnter(collision : Collision){
+	if (collision.gameObject.tag == "Deadly"){
 		Instantiate(explosionPrefab, this.gameObject.rigidbody.position, Quaternion.identity);
 		this.gameObject.active = false;
 		yield WaitForSeconds(1);
+		this.gameObject.active = true;
 		Application.LoadLevel(Application.loadedLevel);
+	}
 }
