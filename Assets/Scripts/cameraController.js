@@ -10,5 +10,7 @@ function Start () {
 }
 
 function Update () {
-	transform.position = initialPosition + (ship.transform.position - initialShip);
+	if (ship){
+		transform.position = initialPosition + (ship.transform.position - initialShip);
+	}
 }
