@@ -39,7 +39,7 @@ function Start() {
 
 function Update() {
 	
-	if (showAccel){
+	if (showAccel && ship){
 		var x = Input.GetAxis("Vertical");
 		xPoints.Push(x);	
 		if (xPoints.length > maxLength) {
@@ -61,12 +61,12 @@ function Update() {
 			var ypos : Vector3 = Vector3(maxWidth * (j*0.5)/yPoints.length * 1.9 + 3.3, yPoints[j], -500.1);
 			yLine.SetPosition(j, ypos);
 		}
-	} else {
+	} else if (ship) {
 		xLine.SetVertexCount(0);
 		yLine.SetVertexCount(0);
 	}
 	
-	if (showVel){
+	if (showVel && ship){
 		var vx = (ship.rigidbody.velocity.x * 0.05);
 		vxPoints.Push(vx);
 		if (vxPoints.length > maxLength){
@@ -88,7 +88,7 @@ function Update() {
 			var vypos : Vector3 = Vector3(maxWidth * (l * 0.5)/vyPoints.length * 1.9 - 7.2, vyPoints[l], -500.2);
 			vyLine.SetPosition(l, vypos);
 		}
-	} else {
+	} else if (ship) {
 		vxLine.SetVertexCount(0);
 		vyLine.SetVertexCount(0);
 	}
