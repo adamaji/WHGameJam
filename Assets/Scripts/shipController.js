@@ -7,8 +7,6 @@ public var deadZone : float;
 public var vArrow : arrowController;
 public var aArrow : arrowController;
 
-public var explosionPrefab : Transform;
-
 function Start () {
 
 }
@@ -31,13 +29,7 @@ function FixedUpdate () {
 }
 
 function OnCollisionEnter(collision : Collision){
-	if (collision.gameObject.tag == "Deadly"){
-		Instantiate(explosionPrefab, this.gameObject.rigidbody.position, Quaternion.identity);
-		this.gameObject.active = false;
-		yield WaitForSeconds(1);
-		this.gameObject.active = true;
-		Application.LoadLevel(Application.loadedLevel);
-	} else if (collision.gameObject.tag == "Finish"){
+	if (collision.gameObject.tag == "Finish"){
 		Application.LoadLevel(0);
 	}
 }
