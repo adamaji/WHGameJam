@@ -18,6 +18,7 @@ function Start () {
 			buttonNames.push(file.Name.Replace(".txt","").Replace("+","★"));
 		}
 	}
+	buttonNames.push("Real Life ★★★★★");
 	scrollPosition = new Vector2(0, 100);
 }
 
@@ -41,9 +42,6 @@ function Update () {
 	}
 	
 	if (Input.GetButtonDown("Fire1")){
-		if (buttonNames[buttonCount] == "Real Life ★★★★★"){
-			Application.Quit();
-		}
 		loader.fileName = levels[ buttonCount ];
 		Application.LoadLevel( 1 );
 	}
@@ -53,12 +51,16 @@ function OnGUI() {
 	if ( buttonCount < levels.length ) {
 		GUI.FocusControl(buttonNames[ buttonCount ]);
 	}
-		
+	
+	//scrollPosition = GUI.BeginScrollView(new Rect(50,50,100,100), scrollPosition, new Rect(50,50,500,500));
+	
 	for (var j=0; j<buttonNames.length; j++){
 		GUI.SetNextControlName(buttonNames[j]);
 		if (GUI.Button(new Rect(100, 50 + j*24, 120, 24), buttonNames[j])){
 			buttonPress = true;
 		}
 	}
-
+				
+	//GUI.EndScrollView();
+	
 }
