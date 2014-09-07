@@ -304,7 +304,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!65 &6500000
 BoxCollider:
@@ -335,6 +335,7 @@ MonoBehaviour:
   deadZone: .0700000003
   vArrow: {fileID: 11400004}
   aArrow: {fileID: 11400002}
+  explosionPrefab: {fileID: 400000, guid: 77aa91099cd97447fa275d2dc8f08d02, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointVector: {x: 0, y: 0}
   color: {r: 1, g: 0, b: 0, a: 1}
+  arrowScale: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,6 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointVector: {x: 0, y: 0}
   color: {r: .0758621693, g: 1, b: 0, a: 1}
+  arrowScale: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
