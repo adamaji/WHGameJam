@@ -7,6 +7,9 @@ private var buttonPress : boolean = false;
 private var lastTime : float = 0;
 private var lastAxisVal : float = 0;
 
+private var xOffset : float;
+private var yOffset : float;
+
 var scrollPosition : Vector2;
 public var loader : levelLoadController;
 function Start () {
@@ -19,7 +22,11 @@ function Start () {
 		}
 	}
 	buttonNames.push("Real Life ★★★★★");
+	levels.length++;
 	scrollPosition = new Vector2(0, 100);
+	
+	xOffset = Screen.width * 0.5;
+	yOffset = Screen.height;
 }
 
 function Update () {
@@ -42,8 +49,12 @@ function Update () {
 	}
 	
 	if (Input.GetButtonDown("Fire1")){
-		loader.fileName = levels[ buttonCount ];
-		Application.LoadLevel( 1 );
+		if (buttonNames[buttonCount] == "Real Life ★★★★★"){
+			Application.Quit();
+		} else{
+			loader.fileName = levels[ buttonCount ];
+			Application.LoadLevel( 1 );
+		}
 	}
 }
 
@@ -56,7 +67,7 @@ function OnGUI() {
 	
 	for (var j=0; j<buttonNames.length; j++){
 		GUI.SetNextControlName(buttonNames[j]);
-		if (GUI.Button(new Rect(100, 50 + j*24, 120, 24), buttonNames[j])){
+		if (GUI.Button(new Rect(100 + xOffset - 120, (50 + j*24), 120, 24), buttonNames[j])){
 			buttonPress = true;
 		}
 	}
