@@ -436,6 +436,10 @@ Prefab:
       propertyPath: max_velocity
       value: 99999
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: a80660fd412c65f41ad73019926e87ac, type: 2}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a80660fd412c65f41ad73019926e87ac, type: 2}
   m_RootGameObject: {fileID: 2017993545}
@@ -1257,7 +1261,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &2017993548
 MonoBehaviour:
@@ -1277,6 +1281,7 @@ MonoBehaviour:
   deadZone: .349999994
   vArrow: {fileID: 620057248}
   aArrow: {fileID: 254664069}
+  explosionPrefab: {fileID: 400000, guid: 77aa91099cd97447fa275d2dc8f08d02, type: 2}
 --- !u!23 &2017993549
 Renderer:
   m_ObjectHideFlags: 0
