@@ -9,6 +9,7 @@ function OnCollisionEnter(collision : Collision){
 		print(levelController.flappys);
 		Instantiate(explosionPrefab, collision.gameObject.rigidbody.position, Quaternion.identity);
 		Destroy(collision.gameObject);
+		won = true;
 		yield WaitForSeconds(2);
 		Application.LoadLevel(Application.loadedLevel);
 	}

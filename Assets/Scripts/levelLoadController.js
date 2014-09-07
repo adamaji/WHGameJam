@@ -13,8 +13,13 @@ public var goalPrefab : Transform;
 public var asteroidPrefab : Transform;
 public var deadFlappy : Transform;
 
+var text : GUIText;
+public static var timeValue : float;
+public static var won : boolean;
+
 function Start () {
 	if (Application.loadedLevel == 1) {
+		won = false;
 		var sr = new StreamReader(Application.dataPath + "/Levels/" + fileName);
 		var fileContents = sr.ReadToEnd();
 		sr.Close();
@@ -40,12 +45,18 @@ function Start () {
 		}
 		for (var c : Vector3 in flappys) {
 			Instantiate(deadFlappy, new Vector3(c.x, c.y, Random.Range(30, 50)), Random.rotation);
-		}
+		}		
 	} else if (Application.loadedLevel == 0) {
+		won = false;
 		flappys = [];
+		timeValue = 0;
+		text.text = "0";
 	}
 }
 
 function Update () {
-
+	if (Application.loadedLevel != 0 && !won) {
+		timeValue += Time.deltaTime;
+		text.text = (Mathf.Floor(timeValue*100)/100).ToString() + "s"; 
+	}
 }
