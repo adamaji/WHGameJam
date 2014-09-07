@@ -37,5 +37,7 @@ function OnCollisionEnter(collision : Collision){
 		yield WaitForSeconds(1);
 		this.gameObject.active = true;
 		Application.LoadLevel(Application.loadedLevel);
+	} else if (collision.gameObject.tag == "Finish"){
+		Application.LoadLevel(0);
 	}
 }
